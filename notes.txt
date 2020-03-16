@@ -1,0 +1,14 @@
+Alfabeto:
+    * "letras tipo foo": s, l, f, w, k
+    * "letras tipo bar": demais { b,r,q,d,n,x,j,m,v,h,t,c,g,z,p }
+    * ordem: kbwrqdnfxjmlvhtcgzps
+
+Preposicao: contem 3, ultima bar, onde nao pode conter d
+Verbo: 8 ou + onde a ultima é foo
+	* comeca com bar (1p)
+	* nao comeca com bar
+
+
+Teste:
+wvkz-zjfj : termina com bar, 8 letras .: é Verbo
+crqs-nlpp : termina com bar, 8 letras .: é Verbo
