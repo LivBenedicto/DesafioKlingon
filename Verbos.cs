@@ -13,7 +13,7 @@ namespace F360
 {
     class Verbos
     {
-        private string ContadorVerbos(string mensagem)
+        public string ContadorVerbos(string mensagem)
         {
             int counterVerbos = 0;
 
@@ -27,7 +27,7 @@ namespace F360
             return $"Quantidade de verbos: {counterVerbos}";
         }
 
-        private string ContadorVerbosPrimeiraPessoa (string mensagem) 
+        public string ContadorVerbosPrimeiraPessoa (string mensagem) 
         {
             int counterVerbosPrimeiraPessoa = 0;
 

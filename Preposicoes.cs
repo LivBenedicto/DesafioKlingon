@@ -12,7 +12,7 @@ namespace F360
 {
     public class Preposicoes
     {
-        private string ContarPreposicoes(string resposta)
+        public string ContarPreposicoes(string resposta)
         {
             int countPreposicao = 0;
 
@@ -25,6 +25,5 @@ namespace F360
 
             return $"Quantidade de preposições: {countPreposicao}";
         }
-
     }
 }

@@ -1,14 +1,33 @@
-Alfabeto:
-    * "letras tipo foo": s, l, f, w, k
-    * "letras tipo bar": demais { b,r,q,d,n,x,j,m,v,h,t,c,g,z,p }
-    * ordem: kbwrqdnfxjmlvhtcgzps
+# Escolhas para escrita do código:
+* Requisição Http: análise "navegador (Network > Response)" e PostMan, identifica-se que o link retorna a resposta com o conteúdo txt
+  da página.
+* List como array principal: dinâmico, não se sabe o tamanho da mensagem a ser convertida.
+* Divisao das classes: de acordo com o assunto solicitado pelas questões. 
+    - Preposicao: contador de preposições dentro de uma mensagem.
+    - Verbo: contador de verbos e verbos classificados como primera pessoa.
+    - Numeros: contador de numeros classificados como "Bonitos", através de um conversor de palavras em números.
 
-Preposicao: contem 3, ultima bar, onde nao pode conter d
-Verbo: 8 ou + onde a ultima é foo
+# Definição e testes:
+>> Alfabeto:
+    Tipos de letras:
+        * foo: s, l, f, w, k
+        * bar: demais { b, r, q, d, n, x, j, m, v, h, t, c, g, z, p }
+    Ordem: k b w r q d n f x j m l v h t c g z p s
+
+>> Preposicao: contem 3, ultima bar, onde nao pode conter d
+    Teste:
+        kkr : termina com bar :. é Preposicao
+        lzd : termina com bar, contem d :. nao Preposicao
+
+>> Verbo: 8 ou + onde a ultima é foo
 	* comeca com bar (1p)
 	* nao comeca com bar
+    Teste:
+        wvkz-zjfj : termina com bar, 8 letras .: é Verbo
+        crqs-nlpp : termina com bar, 8 letras .: é Verbo
 
-
-Teste:
-wvkz-zjfj : termina com bar, 8 letras .: é Verbo
-crqs-nlpp : termina com bar, 8 letras .: é Verbo
+>> Números:
+    Teste:
+    palavra VWV, onde v = 12, w = 2;
+        formula para cada letra: indiceAlfabetoKlingon * 20^indiceLetraDentroPalavra
+        total: 12*20^0 + 2*20^1 + 12*20^2 = 4852
